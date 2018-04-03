@@ -1,14 +1,16 @@
 package net.glebzhebrakov.kfake.random.impl
 
 import net.glebzhebrakov.kfake.random.RandomTool
+import java.lang.String.format
 import java.util.*
+import java.util.Random
+
+
 
 /**
  * Default implementation of {@link RandomTool}.
  */
 class DefaultRandomTool : RandomTool {
-
-    override fun <T> randomGen(f: () -> T, count: Int) = ( 0 .. count ).map{f()}
 
     override fun randomInt() : Int = Random().nextInt()
 
@@ -24,15 +26,7 @@ class DefaultRandomTool : RandomTool {
     override fun randomUUID(): UUID = UUID.randomUUID()
 
 
-    override fun randomBoolean(): Boolean {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun randomBoolean(): Boolean = Random().nextBoolean()
 
-    override fun randomHexString(): String {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun <T : Enum<*>> randomEnum(clazz: Class<T>): T {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun randomHexString(): String = Integer.toHexString( Random().nextInt( 256 * 256 * 256 ) )
 }

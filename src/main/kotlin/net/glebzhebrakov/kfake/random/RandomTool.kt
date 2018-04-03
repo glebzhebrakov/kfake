@@ -12,6 +12,4 @@ interface RandomTool {
     fun randomUUID() : UUID
     fun randomBoolean() : Boolean
     fun randomHexString() : String
-    fun <T : Enum<*>> randomEnum( clazz: Class<T> ): T
-    fun <T> randomGen( f : () -> T, count: Int ): List<T>
 }

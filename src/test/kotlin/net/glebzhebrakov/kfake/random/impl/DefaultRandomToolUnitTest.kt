@@ -62,12 +62,16 @@ class DefaultRandomToolUnitTest {
     }
 
     @Test
-    fun testRandomGen() {
-        sut.randomGen( sut::randomInt , 100 )
+    fun testRandomBoolean() {
+        sut.randomBoolean()
     }
 
-
-
-
+    @Test
+    fun testRandomHexString() {
+        ( 1 .. 100 ).forEach {
+            val res = sut.randomHexString()
+            assert(res.isNotBlank())
+        }
+    }
 
 }
