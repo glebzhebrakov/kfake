@@ -53,3 +53,7 @@ hs_err_pid*
 *.iml
 out
 gen
+/build/
+/.gradle/
+/out/
+/kfake.iml
