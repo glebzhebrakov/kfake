@@ -1,5 +1,6 @@
 package net.glebzhebrakov.kfake.random
 
+import net.glebzhebrakov.kfake.random.impl.DefaultRandomTool
 import java.util.*
 
 /**
@@ -12,4 +13,7 @@ interface RandomTool {
     fun randomUUID() : UUID
     fun randomBoolean() : Boolean
     fun randomHexString() : String
+    companion object {
+        fun defaultTools() :  RandomTool = DefaultRandomTool()
+    }
 }

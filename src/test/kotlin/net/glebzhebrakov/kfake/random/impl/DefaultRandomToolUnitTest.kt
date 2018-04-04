@@ -1,5 +1,6 @@
 package net.glebzhebrakov.kfake.random.impl
 
+import net.glebzhebrakov.kfake.random.RandomTool
 import org.junit.Test
 import java.lang.IllegalArgumentException
 
@@ -8,7 +9,7 @@ import java.lang.IllegalArgumentException
  */
 class DefaultRandomToolUnitTest {
 
-    private val sut = DefaultRandomTool()
+    private val sut = RandomTool.defaultTools()
 
     @Test
     fun testRandomInt() {
