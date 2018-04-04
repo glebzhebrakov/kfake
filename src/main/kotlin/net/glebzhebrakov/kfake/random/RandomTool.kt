@@ -13,6 +13,7 @@ interface RandomTool {
     fun randomUUID() : UUID
     fun randomBoolean() : Boolean
     fun randomHexString() : String
+
     companion object {
         fun defaultTools() :  RandomTool = DefaultRandomTool()
     }

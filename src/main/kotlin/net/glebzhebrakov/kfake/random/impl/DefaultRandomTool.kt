@@ -1,11 +1,8 @@
 package net.glebzhebrakov.kfake.random.impl
 
 import net.glebzhebrakov.kfake.random.RandomTool
-import java.lang.String.format
 import java.util.*
 import java.util.Random
-
-
 
 /**
  * Default implementation of {@link RandomTool}.
@@ -24,7 +21,6 @@ class DefaultRandomTool : RandomTool {
     override fun randomFloat() : Float = Random().nextFloat()
 
     override fun randomUUID(): UUID = UUID.randomUUID()
-
 
     override fun randomBoolean(): Boolean = Random().nextBoolean()
 
